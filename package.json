@@ -9,7 +9,9 @@
     "dev": "npm-run-all --parallel  watch start",
     "test": "npm run  --parallel test-unit test-e2e",
     "test-unit": "jest",
-    "test-e2e": "cypress open"
+    "test-e2e": "cypress open",
+    "test-e2e-report": "cypress run --reporter mochawesome",
+    "test-e2e-cli": "cypress run"
   },
   "repository": {
     "type": "git",
