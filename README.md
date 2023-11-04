@@ -1,7 +1,7 @@
 ## css-frameworks-ca social media app
 ![Friendly](https://github.com/Tokle89/css-frameworks/assets/94007467/216af4e8-93c7-4f9f-9292-b2401af816e7)
 Was asked to create a social media site using bootstrap and scss to show knowledge in using the framework.
-And using javascript for fucnionality
+And using javascript for functionality 
 
 Information:
 You need use @noroff.no or @stud.noroff.no in order to create an account
