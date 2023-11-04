@@ -48,7 +48,9 @@ git clone https://github.com/Tokle89/css-frameworks
 ### Running
 
 To run the app, run the following commands:
-
+```bash
+npm run build
+```
 ```bash
 npm run dev
 ```
