@@ -29,7 +29,7 @@ describe("login test", () => {
 
     cy.get("#login-btn").click();
 
-    cy.wait(2000);
+    cy.wait(1000);
 
     cy.url().should("include", "/profile");
   });
