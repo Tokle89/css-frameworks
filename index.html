@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Meet new friends, share your interests, and forge memories and Friendly" />
+    <meta name="description" content="Meet new friends, share your interests, and forge memories and friendships" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/styles.css" />
     <script
@@ -11,7 +11,8 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <title>Friendly | Home page</title>
+    <script type="module" src="index.js"></script>
+    <title>Friendly | Home</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
     <header class="position-sticky top-0 z-3">
@@ -35,10 +36,10 @@
                 <a class="nav-link text-primary current fs-4" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item px-2">
-                <a class="nav-link text-primary fs-4" href="/feed">Feed</a>
+                <a class="nav-link text-primary fs-4 feed-anchorTag" href="/feed">Feed</a>
               </li>
               <li class="nav-item px-2">
-                <a class="nav-link text-primary fs-4" href="/profile">Profile</a>
+                <a class="nav-link text-primary fs-4 profile-anchorTag" href="/profile">Profile</a>
               </li>
             </ul>
           </div>
@@ -51,7 +52,7 @@
           <h1 class="text-primary">Friendly</h1>
           <p class="mb-0 text-body-secondary">Connecting interests. forging friendships</p>
           <p class="text-body-secondary">Welcome to Friendly</p>
-          <div>
+          <div class="entryBtns">
             <a href="#log-in_section" class="btn btn-info"> Log In</a>
             <a href="#log-in_section" class="btn btn-info ms-5">Register</a>
           </div>
@@ -103,11 +104,13 @@
       </section>
       <section class="py-5 mx-auto" id="log-in_section">
         <h2 class="text-center text-primary mb-5 fs-1">Friendly</h2>
+        <div id="msg-container"></div>
         <div class="form-container container">
           <div class="row justify-content-evenly">
             <div class="col-9 col-sm-5 col-lg-3">
-              <form action="feed/index.html">
+              <form action="/feed" id="log-in">
                 <h2 class="h3 mb-3 fw-normal text-primary text-center">Log in</h2>
+                <div class="login-msg"></div>
                 <div class="mb-3">
                   <label for="email">Email address</label>
                   <input type="email" id="email" placeholder="name@example.com" class="p-1" required />
@@ -120,15 +123,12 @@
               </form>
             </div>
             <div class="col-9 col-sm-5 col-lg-3">
-              <form action="profile/index.html" class="">
+              <form action="/profile" id="register">
                 <h2 class="h3 mb-3 fw-normal text-primary text-center">Register now</h2>
+                <div class="register-msg"></div>
                 <div class="mb-3">
-                  <label for="first name">Email address</label>
-                  <input type="text" id="first name" placeholder="first name" class="p-1" required />
-                </div>
-                <div class="mb-3">
-                  <label for="last name">Password (min 8 characters)</label>
-                  <input type="last name" id="lastname" placeholder="Last name" class="p-1" required />
+                  <label for="username">User name</label>
+                  <input type="text" id="username" placeholder="user name" class="p-1" required />
                 </div>
                 <div class="mb-3">
                   <label for="email">Email address</label>
@@ -150,7 +150,7 @@
       <ul class="nav">
         <li class="nav-item"><a href="index.html" class="nav-link px-2 text-primary">Home</a></li>
         <li class="nav-item"><a href="/feed" class="nav-link px-2 text-primary">Feed</a></li>
-        <li class="nav-item"><a href="profile" class="nav-link px-2 text-primary">Profile</a></li>
+        <li class="nav-item"><a href="/profile" class="nav-link px-2 text-primary">Profile</a></li>
       </ul>
     </footer>
   </body>
